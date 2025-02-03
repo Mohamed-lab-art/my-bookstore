@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Book Store</title>
-</head>
-<body>
-    <h1>Welcome to My Bookstore</h1>
-    <p>Buy my book now!</p>
-    <button id="checkout-button">Buy Now</button>
+<nav>
+    <a href="bookstore.html">Bookstore</a>
+    <a href="admin.html">Admin Panel</a>
+</nav>
 
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-        const stripe = Stripe("YOUR_STRIPE_PUBLIC_KEY");
-        document.getElementById("checkout-button").addEventListener("click", function() {
-            stripe.redirectToCheckout({
-                sessionId: "YOUR_STRIPE_SESSION_ID"
-            });
-        });
-    </script>
-</body>
-</html>
